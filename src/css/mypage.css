@@ -1,0 +1,690 @@
+/* mypage common style start */
+.dummyheader {
+  height: 5.5rem;
+}
+.mypageheader {
+  height: 55px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  background-color: #fff;
+  font-weight: 600;
+}
+.mypageheader.green {
+  background-color: #4cd964;
+  color: #fff;
+}
+.pageBack-icon {
+  position: relative;
+}
+.pageBack-icon::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f057";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+p.normalWeight-txt {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.mypage-maincontents {
+}
+
+.mypage-thum {
+  width: 100%;
+  height: 200px;
+  display: block;
+  overflow: hidden;
+  background-color: #dedede;
+}
+
+.mypage-thum > .thumImg {
+  width: 100%;
+}
+
+.mypage-icon-wrapper {
+  position: relative;
+  height: 45px;
+}
+
+.mypage-icon-circle {
+  position: absolute;
+  right: 5%;
+  top: 0%;
+  transform: translate(-5%, -50%);
+  border-radius: 100%;
+  border: #fff solid 5px;
+  z-index: 10;
+  width: 81px;
+  height: 81px;
+  background-color: #dedede;
+  overflow: hidden;
+}
+
+.mypage-icon-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.item-boxes {
+  display: flex;
+}
+
+.itemBox {
+  width: 20%;
+  height: 70px;
+  padding: 1px 0px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  flex: none;
+}
+
+.content-gap {
+  height: 14px;
+  background-color: #f6f7fb;
+}
+
+.mygame-wrap {
+  padding: 15px 25px;
+}
+
+.mygane-icon-wrap {
+  display: flex;
+  flex-flow: row;
+  padding-top: 5px;
+}
+
+.mygame-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0px 5px;
+  background-color: #dedede;
+}
+
+.status-wrap {
+  height: 56px;
+  padding: 0px 36px 0px 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #a2a2a2;
+}
+
+.status-wrap::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  position: absolute;
+  top: 65.5%;
+  right: 4%;
+  transform: translate(0%, -50%);
+}
+
+.status-offline,
+.status-online {
+  color: #a2a2a2;
+  position: relative;
+}
+
+.status-offline::before {
+  content: "●";
+  color: #feb127;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  margin-right: 5px;
+}
+
+.status-online::before {
+  content: "●";
+  color: #00cf00;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  margin-right: 5px;
+}
+
+.mypage-help-wrap,
+.mypage-detail-wrap {
+  display: flex;
+  flex-flow: column;
+  font-size: 14px;
+  font-weight: normal;
+  flex: none;
+}
+
+.mypage-help,
+.mypage-detail {
+  width: auto;
+  height: 56px;
+  padding-left: 26px;
+  border-bottom: 1px solid #f6f7fb;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.mypage-detail {
+  color: #a2a2a2;
+}
+
+.mypage-help::after,
+.mypage-detail::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-weight: bold;
+  transform: translate(0%, -50%);
+}
+
+.mypage-help .fas,
+.mypage-detail .fas {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* mygame-edit style */
+
+.mygame-form-wrap {
+  height: 63.5px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.createdGame-card,
+.mygame-card {
+  height: 62px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  border-bottom: 1px solid #f5f5f5;
+  padding-left: 18px;
+}
+
+.mygame-card:last-of-type {
+  border: none;
+}
+
+.mygame-card::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  position: absolute;
+  top: 19%;
+  right: 5%;
+  transform: translate(0%, -50%);
+  font-size: 25px;
+  color: #00cf00;
+}
+
+.card-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0px 5px;
+  background-color: #dedede;
+  margin-right: 15px;
+}
+
+.card-info {
+  display: flex;
+  flex-flow: column;
+  font-size: 14px;
+  height: 43px;
+  justify-content: space-between;
+}
+
+.mygame-info-detail {
+  font-size: 11px;
+  color: #727272;
+}
+
+.mygame-newEdit {
+  height: 62px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  padding-left: 18px;
+  font-weight: normal;
+}
+
+.mygame-newEdit::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  position: absolute;
+  font-weight: bold;
+  top: 19%;
+  right: 5%;
+  transform: translate(0%, -50%);
+}
+
+.mygame-newEdit .fas {
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+.createdGame-wrap {
+  padding-top: 25px;
+  background-color: #f6f7fb;
+  height: 100vh;
+}
+
+.createdGame-card {
+  height: 62px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  border-bottom: 1px solid #f5f5f5;
+  padding-left: 18px;
+  background-color: #fff;
+}
+
+.setting-button {
+  width: 236.5px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17.5px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.gray-back {
+  background-color: #f6f7fb;
+  height: 100vh;
+}
+
+.mypage-subttl {
+  font-weight: normal;
+  font-size: 14px;
+  padding: 32px 25px 13.5px;
+}
+
+.ss-box {
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  height: 116px;
+  justify-content: space-around;
+  padding-left: 25px;
+  padding-right: 18px;
+}
+
+.list {
+  border: none;
+  background-image: none;
+  font-size: 16.5px;
+}
+
+.list .list-item__center {
+  border: none;
+  background-image: none;
+}
+
+.img-list-wrap {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 374px;
+}
+
+.img-card {
+  width: 25%;
+  height: 93.5px;
+  border: #818181 solid 0.1px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.username-form-wrap {
+  text-align: center;
+  padding-top: 111px;
+}
+
+.username-form-wrap input.username-form {
+  border: #707070 solid 1px;
+  padding: 5px;
+  height: 45px;
+  width: 90%;
+  padding-left: 15%;
+  position: relative;
+  background-image: none;
+  border-radius: 10px;
+}
+
+.username-form::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f007";
+  position: absolute;
+  font-weight: bold;
+  top: 19%;
+  right: 5%;
+  transform: translate(0%, -50%);
+}
+
+.textarea-wrap {
+  text-align: center;
+  padding-top: 30px;
+}
+
+textarea.textarea {
+  padding: 10px;
+  width: 90%;
+  height: 283px;
+  resize: none;
+  background-color: #fff;
+  display: inline;
+  background-image: none;
+  border: 1px solid #262626;
+}
+
+.txt-count {
+  text-align: right;
+  padding: 2px 5%;
+  color: #727272;
+  font-size: 11px;
+}
+
+/* account.html style */
+
+.sns-cooperation-list {
+  padding: 0px;
+}
+
+.cooperation-list-item {
+  border-bottom: 0.1px solid #eaeaea;
+  height: 50px;
+  padding: 0px 18px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.cooperation-list-item img {
+  width: 35.5px;
+  height: 35.5px;
+  margin-right: 10px;
+}
+
+.cooperation-list-item button {
+  margin-left: auto;
+  font-size: 14px;
+  background-color: #fff;
+  border: 0.1px solid #262626;
+  border-radius: 5px;
+  width: 80px;
+  height: 27.5px;
+}
+
+.cooperation-list-item button.clicked {
+  background-color: #00cf00;
+  border: 0.1px solid #00cf00;
+  color: #fff;
+}
+
+.current-address-wrap {
+  padding-top: 20px;
+  font-weight: normal;
+}
+
+.account-subttl {
+  padding-left: 16px;
+  height: 30px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.curent-address {
+  padding-left: 16px;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 30px;
+  border-bottom: solid 0.1px #bbb;
+  border-top: solid 0.1px #bbb;
+}
+
+.mail-form {
+  display: inline-flex;
+  width: 90%;
+  height: 40px;
+  background-color: #fff;
+  border: 0.1px solid #bbb;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.text-input.text-input--underbar {
+  padding-left: 10px;
+  border-bottom: none;
+}
+
+ons-button.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 61%;
+  height: 50px;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 26px;
+}
+
+ons-button.resend-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 61%;
+  height: 50px;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 26px;
+  border: 1px solid #262626;
+  color: #262626;
+  background-color: transparent;
+  font-weight: normal;
+}
+
+ons-input.number-input {
+  border: solid 0.1px #bbb;
+  border-radius: 5px;
+  width: 49px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input.text-input {
+  font-size: 40px;
+  padding: 25%;
+}
+
+p.confirmation-note {
+  padding-top: 122px;
+  margin-bottom: 65px;
+}
+p.normalWeight-txt {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.login-maincontents .center {
+  text-align: center;
+}
+
+/* follow,follower,frend list style */
+ul.list-items {
+  padding: 0px;
+  background-color: #fff;
+  margin: 0px;
+}
+
+li.list-item {
+  border-bottom: 0.1px solid #e8e8e8;
+  display: flex;
+  height: 84.5px;
+  align-items: center;
+  padding-left: 14px;
+  font-size: 14px;
+  position: relative;
+}
+
+.list-item::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  color: #727272;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(0%, -50%);
+}
+
+img.account-img {
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+}
+
+.item-detail {
+  display: inline-flex;
+  flex-flow: column;
+  align-items: baseline;
+  height: 68px;
+  padding: 0px 10px 0px 14px;
+  width: 200px;
+}
+
+.account-name {
+  position: relative;
+}
+
+.account-name::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  color: #bbb;
+  position: absolute;
+  top: 60%;
+  right: -26%;
+  font-size: 12px;
+  transform: translate(0%, -50%);
+}
+
+p.account-message {
+  font-size: 12px;
+  font-weight: normal;
+  overflow: hidden;
+  margin-top: 13.5px;
+  line-height: 16px;
+}
+
+.item-meta {
+  height: 68px;
+}
+
+p.message-time {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.unread-number-wrao {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 11px;
+}
+p.unread-number {
+  background-color: #4cd964;
+  height: 22.5px;
+  width: 22.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: #fff;
+}
+
+.follower-detail {
+  display: inline-flex;
+  align-items: center;
+  height: 68px;
+  padding: 0px 10px 0px 14px;
+  width: 200px;
+}
+
+.community-list-item {
+  border-bottom: 0.1px solid #e8e8e8;
+  display: flex;
+  height: 82px;
+  align-items: center;
+  padding-left: 14px;
+  font-size: 14px;
+  position: relative;
+}
+
+.community-list-item::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  color: #727272;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(0%, -50%);
+}
+
+.community-img {
+  width: 43px;
+  height: 43px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.community-details {
+  display: flex;
+  flex-flow: column;
+}
+
+p.community-category {
+  font-size: 11px;
+  color: #4cd964;
+}
+
+.community-meta {
+  display: flex;
+  flex-flow: row;
+  font-size: 12px;
+  color: #727272;
+}
+.community-meta span {
+  margin-right: 10px;
+}
