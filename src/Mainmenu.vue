@@ -16,14 +16,14 @@
 </template>
 
 <script>
-// import settingsPage from 'Settings';
+import settingsPage from 'Settings';
 import homePage from 'Home';
 import newsPage from 'News';
 import chat from 'Chat';
+import mypage from 'Mypage-Navi';
 import test from 'Test';
 import Account from 'Account';
-import MypageNavi from 'MypageNavi';
-
+import router from './router.js'
 
 // firebase モジュール
 import firebase from 'firebase'
@@ -35,10 +35,10 @@ export default {
     Nl2br,
     chat,
     homePage,
+    settingsPage,
     newsPage,
     test,
-    MypageNavi
-
+    router
   },
 
   data() {
@@ -62,9 +62,9 @@ export default {
               badge: 3
             },
             {
-              icon: this.md() ? null : 'ion-ios-MypageNavi',
-              label: 'Mypage',
-              page: MypageNavi
+              icon: this.md() ? null : 'ion-ios-settings',
+              label: 'Settings',
+              page: settingsPage
             },
             {
               icon: this.md() ? null : 'ion-ios-test',

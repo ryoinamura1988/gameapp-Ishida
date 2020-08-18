@@ -54,9 +54,11 @@
                     <div class="companion-wrap">
                       <div class="item-image"><img class="companion-icon"  :src="image" width="35" height="35" margin-right="7.5px">
                       </div>
-                      <div class="item-detail">
-                        <div class="item-message message-balloon myself-message">
-                            <nl2br tag="div" :text="message"/>
+                      <div class="myself-wrap">
+                        <div class="item-detail">
+                          <div class="item-message message-balloon myself-message">
+                              <nl2br tag="div" :text="message"/>
+                          </div>
                         </div>
                       </div>
                     </div>

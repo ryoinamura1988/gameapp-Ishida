@@ -11,7 +11,8 @@
         "onsenui": "2.10.8",
         "vue": "^2.6.10",
         "vue-nl2br": "^0.1.2",
-        "vue-onsenui": "^2.6.2"
+        "vue-onsenui": "^2.6.2",
+        "vue-router": "^3.4.2"
     },
     "scripts": {
         "monaca:preview": "npm run dev & npm run watch",

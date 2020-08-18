@@ -5,6 +5,7 @@ import VueOnsen from 'vue-onsenui';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+// import router from './router.js';
 
 
 Vue.config.productionTip = false
