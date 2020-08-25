@@ -3,88 +3,107 @@
     <div class="main">
       <!-- スマホ用ヘッダー部 -->
       <div class="dummyheader"></div>
-
       <ons-toolbar class="mypageheader">
         <div class="center">マイページ</div>
       </ons-toolbar>
       <!-- スマホ用ヘッダー部  end-->
       <div class="mypage-maincontents">
         <div class="mypage-thum">
-          <img class="thumImg" src="" alt="" />
-          <!-- /www/img/tlImg.png -->
+          <img class="thumImg" />
         </div>
         <div class="mypage-icon-wrapper">
           <div class="mypage-icon-circle">
-            <img class="mypage-icon-img" src="" alt="" />
-            <!-- /www/img/tlImg.png -->
+            <img class="mypage-icon-img" src alt />
           </div>
         </div>
         <div class="item-boxes">
-          <div @click="pushfollow"  class="itemBox">
+          <a @click="pushfollow" class="item-box">
             <span class="item-number">0</span>
             <span class="item-label">フォロー</span>
-          </div>
-          <a class="itemBox" href="">
+          </a>
+          <a @click="pushfollower" class="item-box" href>
+            <span class="item-number">0</span>
+            <span class="item-label">フォロワー</span>
+          </a>
+          <a class="item-box" href>
             <span class="item-number">0</span>
             <span class="item-label">フレンド</span>
           </a>
-          <div @click="pushroom" class="itemBox">
+          <a @click="pushroom" class="item-box" href>
             <span class="item-number">0</span>
             <span class="item-label">ルーム</span>
-          </div>
-          <a class="itemBox" href="">
+          </a>
+          <a class="item-box" href>
             <span class="item-number">0</span>
             <span class="item-label">イベント</span>
           </a>
-          <div @click="pushfollower" class="itemBox" >
-            <span class="item-number">0</span>
-            <span class="item-label">フォロワー</span>
-          </div>
         </div>
         <div class="content-gap"></div>
-        <div @click="pushmygameedit" class="mygame-wrap">
+        <div class="mygame-wrap">
           <p>マイゲーム</p>
-          <div class="mygane-icon-wrap" >
-            <div class="mygame-icon">
-              <img src="" alt="" />
+          <div class="mygame-item-wrap">
+            <div class="mygame-icon-wrap">
+              <div class="mygame-icon">
+                <img src alt />
+              </div>
+              <div class="mygame-icon">
+                <img src alt />
+              </div>
+              <div class="mygame-icon">
+                <img src alt />
+              </div>
+              <div class="mygame-icon">
+                <img src alt />
+              </div>
+              <div class="mygame-icon">
+                <img src alt />
+              </div>
+              <div class="mygame-icon">
+                <img src alt />
+              </div>
+              <div class="mygame-icon">
+                <img src alt />
+              </div>
+              <div class="mygame-icon">
+                <img src alt />
+              </div>
             </div>
-            <div class="mygame-icon">
-              <img src="" alt="" />
-            </div>
+            <button @click="pushmygameedit" class="add-mygame">
+              <i class="fas fa-plus-circle"></i>
+            </button>
           </div>
         </div>
         <div class="content-gap"></div>
-        <div @click="pushstatussetting"  class="status-wrap">
+        <div @click="pushstatussetting" class="status-wrap">
           <span>ステータス設定</span>
-          <a class="status-offline" href="">オフライン</a>
+          <a class="status-online" href>オンライン</a>
         </div>
         <div class="content-gap"></div>
         <div class="mypage-detail-wrap">
-          <div @click="pushprofile" class="mypage-detail" >
+          <a @click="pushprofile" class="mypage-detail">
             <i class="fas fa-user"></i>
             <span>プロフィール</span>
-            
-          </div>
+          </a>
           <a @click="pushbookmark" class="mypage-detail">
             <i class="fas fa-bookmark"></i>
             <span>ブックマーク</span>
           </a>
-          <a  @click="pushaccount"  class="mypage-detail">
+          <a @click="pushaccount" class="mypage-detail">
             <i class="fas fa-address-card"></i>
             <span>アカウント</span>
           </a>
-          <a class="mypage-detail" href="">
+          <a @click="pushnotificationsetting" class="mypage-detail">
             <i class="fas fa-bell"></i>
             <span>通知設定</span>
           </a>
         </div>
         <div class="content-gap"></div>
         <div class="mypage-help-wrap">
-          <a class="mypage-help" href="">
+          <a @click="pushhelp" class="mypage-help">
             <i class="fas fa-question-circle"></i>
             <span>ヘルプ</span>
           </a>
-          <a class="mypage-help" href="">
+          <a @click="pushappinfo" class="mypage-help">
             <i class="fas fa-info-circle"></i>
             <span>アプリ情報・利用規約</span>
           </a>
@@ -94,69 +113,77 @@
     <!-- /main -->
 
     <!-- <script src="js/script.js"></script> -->
-
   </v-ons-page>
 </template>
 
 
 
 <script>
-  import Account from 'Account';
-  import Bookmark from 'Bookmark';
-  import Profile from 'Profile';
-  import StatusSetting from 'StatusSetting';
-  import MyGameEdit from 'MyGameEdit';
-  import Follow from 'Follow';
-  import Follower from 'Follower';
-  import Room from 'Room';
+import Account from "Account";
+import Bookmark from "Bookmark";
+import Profile from "Profile";
+import StatusSetting from "StatusSetting";
+import MyGameEdit from "MyGameEdit";
+import Follow from "Follow";
+import Follower from "Follower";
+import Room from "Room";
+import NotificationSetting from "NotificationSetting";
+import Help from "Help";
+import AppInfo from "AppInfo";
 
-
-
-  export default {
-     methods: {
-       pop(){
-         this.pageStack.pop();
-       },
-       push() {
-         this.pageStack.push(page2);
-       },
-       pushprofile() {
-         this.pageStack.push(Profile);
-       },
-       pushbookmark() {
-         this.pageStack.push(Bookmark);
-       },
-       pushaccount() {
-         this.pageStack.push(Account);
-       },
-       pushstatussetting() {
-         this.pageStack.push(StatusSetting);
-       },
-       pushmygameedit() {
-         this.pageStack.push(MyGameEdit);
-       },
-       pushfollow() {
-        this.pageStack.push(Follow);
-       },
-       pushfollower() {
-        this.pageStack.push(Follower);
-       },
-       pushroom() {
-        this.pageStack.push(Room);
-       }
-      
-     },
-     props: ['pageStack'],
-     components: {  },
-     key: 'key_page1'
-  }
+export default {
+  methods: {
+    pop() {
+      this.pageStack.pop();
+    },
+    push() {
+      this.pageStack.push(page2);
+    },
+    pushprofile() {
+      this.pageStack.push(Profile);
+    },
+    pushbookmark() {
+      this.pageStack.push(Bookmark);
+    },
+    pushaccount() {
+      this.pageStack.push(Account);
+    },
+    pushstatussetting() {
+      this.pageStack.push(StatusSetting);
+    },
+    pushmygameedit() {
+      this.pageStack.push(MyGameEdit);
+    },
+    pushfollow() {
+      this.pageStack.push(Follow);
+    },
+    pushfollower() {
+      this.pageStack.push(Follower);
+    },
+    pushroom() {
+      this.pageStack.push(Room);
+    },
+    pushnotificationsetting() {
+      this.pageStack.push(NotificationSetting);
+    },
+    pushhelp() {
+      this.pageStack.push(Help);
+    },
+    pushappinfo() {
+      this.pageStack.push(AppInfo);
+    }
+  },
+  props: ["pageStack"],
+  components: {},
+  key: "key_mypage"
+};
 </script>
 
 
 
 
 <style>
-  @import "./css/mypage.css";  
+@import "./css/reset.css";
+@import "./css/style.css";
+@import "./css/mypage.css";
 </style>
-
-
