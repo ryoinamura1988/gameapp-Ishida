@@ -9,7 +9,7 @@
           <!-- <div class="left">
             <ons-icon icon="far-times-circle"></ons-icon>
           </div>-->
-          <div class="center">フォロー</div>
+          <div class="center">フレンド</div>
         </ons-toolbar>
         <!-- スマホ用ヘッダー部  end-->
         <div class="mypage-maincontents">
@@ -110,6 +110,6 @@ export default {
   },
   props: ["pageStack"],
   components: {},
-  key: "key_follow"
+  key: "key_friend"
 };
 </script>

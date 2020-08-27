@@ -494,6 +494,10 @@ p.normalWeight-txt {
   margin-right: 0.5rem;
 }
 
+.mypage-maincontents .radio-button--material {
+  display: flex;
+}
+
 .radio-button--material__checkmark:before {
   border: 0.15rem solid #a2a2a2;
 }

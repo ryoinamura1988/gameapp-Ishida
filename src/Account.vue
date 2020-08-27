@@ -1,9 +1,11 @@
 <template>
   <v-ons-page>
-    <div id="app">
+    <div class="app">
       <div class="main">
         <!-- スマホ用ヘッダー部 -->
         <div class="dummyheader"></div>
+        <v-ons-back-button>マイページ</v-ons-back-button>
+
         <ons-toolbar class="mypageheader pageBack-icon green">
           <!-- <div class="left">
           <ons-icon icon="far-times-circle"></ons-icon>

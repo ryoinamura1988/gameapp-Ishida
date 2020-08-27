@@ -13,10 +13,10 @@
           <div class="gray-back">
             <ul class="list">
               <li class="list-item list-item--chevron">
-                <div class="list-item__center">ご利用ガイド</div>
+                <div @click="pushguide" class="list-item__center">ご利用ガイド</div>
               </li>
               <li class="list-item list-item--chevron">
-                <div class="list-item__center">よくある質問</div>
+                <div @click="pushfaq" class="list-item__center">よくある質問</div>
               </li>
               <li class="list-item list-item--chevron">
                 <div class="list-item__center">お問い合わせ</div>
@@ -32,11 +32,19 @@
 
 <script>
 import app from "./App";
+import Guide from "Guide";
+import Faq from "Faq";
 
 export default {
   methods: {
     pop() {
       this.pageStack.pop();
+    },
+    pushguide() {
+      this.pageStack.push(Guide);
+    },
+    pushfaq() {
+      this.pageStack.push(Faq);
     }
   },
   props: ["pageStack"],

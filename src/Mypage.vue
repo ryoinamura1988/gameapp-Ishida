@@ -21,15 +21,15 @@
             <span class="item-number">0</span>
             <span class="item-label">フォロー</span>
           </a>
-          <a @click="pushfollower" class="item-box" href>
+          <a @click="pushfollower" class="item-box">
             <span class="item-number">0</span>
             <span class="item-label">フォロワー</span>
           </a>
-          <a class="item-box" href>
+          <a @click="pushfriend" class="item-box">
             <span class="item-number">0</span>
             <span class="item-label">フレンド</span>
           </a>
-          <a @click="pushroom" class="item-box" href>
+          <a @click="pushroom" class="item-box">
             <span class="item-number">0</span>
             <span class="item-label">ルーム</span>
           </a>
@@ -76,7 +76,7 @@
         <div class="content-gap"></div>
         <div @click="pushstatussetting" class="status-wrap">
           <span>ステータス設定</span>
-          <a class="status-online" href>オンライン</a>
+          <a class="status-online">オンライン</a>
         </div>
         <div class="content-gap"></div>
         <div class="mypage-detail-wrap">
@@ -130,6 +130,7 @@ import Room from "Room";
 import NotificationSetting from "NotificationSetting";
 import Help from "Help";
 import AppInfo from "AppInfo";
+import Friend from "Friend";
 
 export default {
   methods: {
@@ -171,6 +172,9 @@ export default {
     },
     pushappinfo() {
       this.pageStack.push(AppInfo);
+    },
+    pushfriend() {
+      this.pageStack.push(Friend);
     }
   },
   props: ["pageStack"],

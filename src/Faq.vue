@@ -4,29 +4,23 @@
       <div class="main">
         <!-- スマホ用ヘッダー部 -->
         <div class="dummyheader"></div>
+        <v-ons-back-button>マイページ</v-ons-back-button>
+
         <ons-toolbar class="mypageheader pageBack-icon green">
-          <!-- <div class="left">
-          <ons-icon icon="far-times-circle"></ons-icon>
-          </div>-->
-          <div class="center">アプリ情報・利用規約</div>
+          <div class="center">よくある質問</div>
         </ons-toolbar>
         <!-- スマホ用ヘッダー部  end-->
         <div class="mypage-maincontents">
           <div class="gray-back">
             <ul class="list">
               <li class="list-item list-item--chevron">
-                <div @click="pushterm" class="list-item__center">利用規約</div>
+                <div class="list-item__center">パスワード再設定方法</div>
               </li>
               <li class="list-item list-item--chevron">
-                <div @click="pushpolicy" class="list-item__center">プライバシーポリシー</div>
+                <div class="list-item__center">ユーザー名の変更方法</div>
               </li>
-            </ul>
-            <ul class="list">
-              <li class="list-item">
-                <div class="list-item__center">バージョン</div>
-                <div class="list-item__right">
-                  <div class="list-item__label">1.00.0</div>
-                </div>
+              <li class="list-item list-item--chevron">
+                <div class="list-item__center">退会方法</div>
               </li>
             </ul>
           </div>
@@ -39,23 +33,15 @@
 
 <script>
 import app from "./App";
-import Term from "Term";
-import Policy from "Policy";
 
 export default {
   methods: {
     pop() {
       this.pageStack.pop();
-    },
-    pushterm() {
-      this.pageStack.push(Term);
-    },
-    pushpolicy() {
-      this.pageStack.push(Policy);
     }
   },
   props: ["pageStack"],
   components: {},
-  key: "key_appinfo"
+  key: "key_faq"
 };
 </script>
